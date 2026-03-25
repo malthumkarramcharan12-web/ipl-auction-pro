@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>IPL Auction by Pandu</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Play IPL Auction</h1>
+<h2 class="highlight">with Friends</h2>
+
+<form action="/auction" method="POST">
+
+<input type="text" name="name" placeholder="Enter your name" required>
+
+<h3>Choose Team</h3>
+
+<div class="teams">
+{% for team in teams %}
+<button name="team" value="{{team}}">{{team}}</button>
+{% endfor %}
+</div>
+
+<button class="create">Create Room</button>
+<button class="join">Join Room</button>
+<button class="bot">Play with Computer</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
